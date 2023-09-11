@@ -26,5 +26,4 @@ jobs:
       - uses: k1LoW/octocov-action@v0
         with:
           config: .octocov.yml
-          github-token: ${{ secrets.GITHUB_TOKEN }}
 
