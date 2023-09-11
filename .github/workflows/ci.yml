@@ -6,9 +6,9 @@ jobs:
   change-check:
     runs-on: ubuntu-latest
     outputs:
-      is-one-changed: ${{ steps.one.outputs.any_changed }}
-      is-two-changed: ${{ steps.two.outputs.any_changed }}
-      is-three-changed: ${{ steps.three.outputs.any_changed }}
+      is-one-changed: ${{ steps.one-files.outputs.any_changed }}
+      is-two-changed: ${{ steps.two-files.outputs.any_changed }}
+      is-three-changed: ${{ steps.three-files.outputs.any_changed }}
     steps:
       - uses: actions/checkout@v3
         with:
