@@ -17,6 +17,7 @@ jobs:
       id-token: write
       contents: read
       pull-requests: write
+      statses: write
     steps:
       - uses: actions/setup-go@v2
         with:
