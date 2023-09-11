@@ -11,9 +11,10 @@ on:
         default: 1.21
 
 jobs:
-  lint-and-test:
+  test:
     runs-on: ubuntu-latest
     permissions:
+      id-token: write
       contents: read
       pull-requests: write
     steps:
