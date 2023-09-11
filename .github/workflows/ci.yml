@@ -63,6 +63,9 @@ jobs:
       go-version: 1.21
 
   three-ci:
+    permissions:
+      contents: read
+      pull-requests: write
     needs: [change-check]
     if: needs.change-check.outputs.is-three-changed == 'true'
     uses: ./.github/workflows/test.yml
