@@ -14,7 +14,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: check one diff
-        uses: tj-actions/changed-files@v32
+        uses: tj-actions/changed-files@v39
         id: one-files
         with:
           files: |
@@ -22,7 +22,7 @@ jobs:
             .github/workflows/ci.yml
             .github/workflows/test.yml
       - name: check two diff
-        uses: tj-actions/changed-files@v32
+        uses: tj-actions/changed-files@v39
         id: two-files
         with:
           files: |
@@ -30,7 +30,7 @@ jobs:
             .github/workflows/ci.yml
             .github/workflows/test.yml
       - name: check three diff
-        uses: tj-actions/changed-files@v32
+        uses: tj-actions/changed-files@v39
         id: three-files
         with:
           files: |
