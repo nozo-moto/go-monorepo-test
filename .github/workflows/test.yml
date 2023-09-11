@@ -14,10 +14,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     permissions:
-      id-token: write
       contents: read
       pull-requests: write
-      statuses: write
     steps:
       - uses: actions/setup-go@v2
         with:
