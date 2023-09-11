@@ -1,0 +1,28 @@
+name: test
+on:
+  workflow_call:
+    inputs:
+      working-directory:
+        required: true
+        type: string
+      go-version:
+        required: false
+        type: string
+        default: 1.21
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/setup-go@v2
+        with:
+          go-version: ${{ inputs.go-version }}
+      - uses: actions/checkout@v3
+      - name: test
+        run: go test ./${{ inputs.working-directory }}/... -coverprofile=coverage.out
+      - uses: k1LoW/octocov-action@v0
+        with:
+          config: .octocov.yml
+
